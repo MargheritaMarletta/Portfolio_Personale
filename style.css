@@ -1,0 +1,690 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    /* overflow-x: hidden; */
+    background-color: #F2F4F5;
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    /* margin-top: 0px; */
+    padding: 2vh;
+    /* top: 0;
+    left: 0; */
+    position: fixed;
+    justify-content: space-between;
+    background-color: #F2F4F5;
+    align-items: center;
+    display: flex;
+    border-bottom: 2px solid #a7afb0;
+    z-index: 100;
+}
+
+.title {
+    font-size: 2.5vh;
+    color: #A6B3B5;
+    font-weight: 700;
+    transition: 0.3s ease-in;
+}
+
+.title:hover {
+    transform: scale(1.1);
+}
+
+/* HAMBURGER MENU */
+
+nav {
+    display: flex;
+}
+
+nav a {
+    font-size: 2vh;
+    color: #A6B3B5;
+    margin-left: 1vh;
+    font-weight: 500;
+    display: flex;
+    /*inline-block*/
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+}
+
+nav a:hover {
+    border-bottom: 1px solid #F2F4F5;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    transition: 0.15s ease-in-out;
+    background-color: #A6B3B5;
+}
+
+nav a:hover:after {
+    width: 100%;
+}
+
+.open-menu,
+.close-menu {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    font-size: 2vh;
+    display: none;
+    filter: invert(50%) sepia(12%) saturate(258%) hue-rotate(153deg) brightness(89%) contrast(89%);
+}
+
+.open-menu {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+/* FINE HAMBURGER MENU */
+
+.grey-background {
+    background-color: #A6B3B5;
+}
+
+.logo {
+    max-width: 30%;
+    height: auto;
+    margin: 0;
+    margin-left: 15%;
+}
+
+.box1,
+.box2,
+.box3 {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box2 {
+    background-color: #a7afb0;
+}
+
+.box3 {
+    height: 70vh;
+    justify-content: center;
+}
+
+.content-box1 {
+    height: 100vh;
+    margin-right: 10%;
+    align-items: flex-end;
+}
+
+.content-box2 {
+    width: 90vh;
+    height: 100vh;
+    margin-left: 10%;
+    align-items: flex-start;
+}
+
+.content-box1,
+.content-box2,
+.content-box3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.content-box3 {
+    height: 45vh;
+    align-items: center;
+}
+
+.content-box1 h1,
+.content-box2 h1,
+.content-box3 h1 {
+    font-size: 4vh;
+    padding: 2vh 0;
+}
+
+.content-box1 h1 {
+    color: #000000;
+}
+
+.content-box2 h1 {
+    color: #ffffff;
+    text-align: left;
+}
+
+.content-box3 h1 {
+    color: #394E51;
+    text-align: center;
+}
+
+.content-box1 p {
+    font-size: 2.5vh;
+    color: #394E51;
+    text-align: right;
+}
+
+.content-box2 p {
+    font-size: 2.5vh;
+    padding-bottom: 2vh;
+    color: #ffffff;
+    text-align: left;
+}
+
+.content-box2 a {
+    font-size: 2vh;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+.content-box2 a:hover {
+    color: #394E51;
+    border-bottom: 1px solid #394E51;
+}
+
+.profile {
+    max-width: 40%;
+    height: auto;
+    /* margin: 0; */
+    margin: 10%;
+    /* padding: 2vh; */
+    /* border: 0.3vh solid #F2F4F5; */
+}
+
+.section1,
+.section2,
+.section3 {
+    width: 60%;
+    height: 6%;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #394E51;
+    border-radius: 4%; */
+    justify-content: center;
+    margin: 3%;
+}
+
+.section1 a,
+.section2 a,
+.section3 a {
+    color: #869FA3;
+    font-size: 3vh;
+    font-weight: medium;
+}
+
+.section1 a:hover,
+.section2 a:hover,
+.section3 a:hover {
+    border-bottom: 1px solid #6d8083;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    padding: 5vh 0;
+    border-top: 1px solid #869FA3;
+}
+
+.social {
+    width: 100%;
+    padding: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social a {
+    font-size: 2vh;
+    color: #394E51;
+    padding: 2vh;
+}
+
+.instagram,
+.pinterest,
+.gmail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer img,
+.social img {
+    width: 4vh;
+    filter: invert(50%) sepia(12%) saturate(258%) hue-rotate(153deg) brightness(89%) contrast(89%);
+    margin: 0 2vh;
+}
+
+footer p {
+    color: #394E51;
+    text-align: center;
+    margin-top: 3vh;
+}
+
+/* PAGINA: SU DI ME */
+
+.sudime_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sudime_box p {
+    font-size: 2.5vh;
+    color: #ffffff;
+    padding: 0 10% 2% 10%;
+}
+
+.sudime_profile {
+    max-width: 30%;
+    height: auto;
+    margin: 6% 0 2% 0;
+}
+
+.back_home {
+    background-color: #F2F4F5;
+    max-width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-left: 3vh;
+}
+
+.back_home a {
+    font-size: 2vh;
+    color: #394E51;
+}
+
+.back_home a:hover {
+    border-bottom: 1px solid #394E51;
+}
+
+/* PAGINA: CONTATTI */
+
+h2 {
+    font-size: 4vh;
+    color: #394E51;
+    padding-top: 15vh;
+    padding-left: 15vh;
+}
+
+/* PAGINA: PROGETTI */
+
+.progetti {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 8vh;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 30%;
+}
+
+.column a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5vh;
+    color: #394E51;
+}
+
+.column a img {
+    max-width: 65%;
+    height: auto;
+    object-fit: fill;
+    padding-top: 5vh;
+}
+
+.column a:hover {
+    color: #869FA3;
+}
+
+/* .column a img {
+    max-width: 65%;
+    height: auto;
+    object-fit: fill;
+    padding-top: 5vh;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 30%;
+}
+
+.column a {
+    font-size: 2.5vh;
+    color: #394E51;
+    margin-top: 1vh;
+}
+
+.column a:hover {
+    color: #869FA3;
+} */
+
+/* PAGINA: PROGETTO - PAGINA */
+
+.progetto {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+h3 {
+    font-size: 4vh;
+    color: #ffffff;
+    padding-top: 15vh;
+    padding-left: 15vh;
+}
+
+.progetto img {
+    width: 25%;
+    margin: 5vh 15vh;
+}
+
+.progetto p {
+    font-size: 2.5vh;
+    color: #ffffff;
+}
+
+/* PAGINA: FOTOGRAFIA */
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vh;
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 2vh 1vh;
+
+}
+
+.gallery img {
+    width: 35vh;
+    max-width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+
+.description {
+    font-size: 2.5vh;
+    color: #ffffff;
+    padding: 5vh 15vh;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1023px) {
+
+    /* HAMBURGER MENU */
+
+    nav {
+        position: fixed;
+        display: flex;
+        /* align-items: center; */
+        /* justify-content: center; */
+        flex-direction: column;
+        width: 30%;
+        height: 100vh;
+        position: fixed;
+        padding-top: 80px;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        transition: right 0.3s ease-in-out;
+        background-color: #a7afb0;
+    }
+
+    nav a {
+        color: #ffffff;
+        font-size: 2.5vh;
+        padding: 2%;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+
+    #check:checked~.open-menu {
+        display: none;
+    }
+
+    #check:checked~nav {
+        right: 0;
+    }
+
+    #check:checked~nav .close-menu {
+        display: block;
+    }
+
+    /* FINE HAMBURGER MENU */
+
+    .box1 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .content-box1 {
+        height: auto;
+        margin: 0;
+        padding: 2% 5%;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-box1 h1 {
+        font-size: 2.5vh;
+        padding: 2% 0;
+        text-align: center;
+    }
+
+    .content-box1 p {
+        font-size: 2.5vh;
+        text-align: center;
+    }
+
+    .logo {
+        max-width: 30%;
+        margin: 10% 0 2%;
+    }
+
+    .box2 {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .profile {
+        max-width: 80%;
+        margin: 5% 0 0;
+    }
+
+    .content-box2 {
+        width: 100%;
+        height: 50vh;
+        margin: 0;
+        align-items: center;
+        text-align: center;
+        padding: 0 5%;
+    }
+
+    .content-box2 h1 {
+        font-size: 2.5vh;
+        text-align: center;
+    }
+
+    .content-box2 p {
+        font-size: 2.5vh;
+        text-align: left;
+        padding: 2% 5%;
+    }
+
+    /* PAGINA: SU DI ME */
+
+    .sudime_profile {
+        /* max-width: 70%; */
+        padding-top: 5%;
+    }
+
+    /* PAGINA: PROGETTI */
+
+    .column {
+        max-width: 45%;
+    }
+
+    .column a {
+        font-size: 2vh;
+    }
+
+    /* PAGINA: PROGETTO SINGOLO */
+
+    .progetto {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .progetto img {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    h3 {
+        padding: 5vh 0;
+        font-size: 3vh;
+    }
+
+    .progetto p {
+        font-size: 2vh;
+        padding: 2vh;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .box1 {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-top: 15vh;
+        max-width: 40%;
+        height: auto;
+    }
+
+    .content-box1 h1 {
+        font-size: 4vh;
+    }
+
+    .content-box1 p {
+        margin-bottom: 2vh;
+    }
+
+    .content-box2 h1,
+    .content3 h1 {
+        font-size: 3vh;
+    }
+
+    .content-box2 p {
+        font-size: 2.3vh;
+        margin-bottom: 2vh;
+    }
+
+    /* PAGINA: SU DI ME */
+
+    .sudime_profile {
+        max-width: 70%;
+        padding-top: 8vh;
+    }
+
+    /* PAGINA: PROGETTI */
+
+    .column {
+        max-width: 100%;
+    }
+
+    .progetti img {
+        max-width: 80%;
+    }
+
+    .column a {
+        font-size: 2vh;
+    }
+
+    /* PAGINA: PROGETTO SINGOLO */
+
+    .progetto img {
+        width: 80%;
+    }
+
+    h3 {
+        font-size: 2.5vh;
+        padding: 15vh 5vh;
+    }
+
+    .progetto p {
+        font-size: 2vh;
+    }
+
+}
